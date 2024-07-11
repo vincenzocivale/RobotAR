@@ -4,11 +4,11 @@ public class RobotManager : MonoBehaviour
 {
     [SerializeField]
     private string[] linkTags;
-    RobotJoint[] robotJoints;
-    GameObject[] joints;
+    private RobotJoint[] robotJoints;
+    private GameObject[] joints;
 
-    float[] prevAnglesDeg;
-    public float[] PreviousJointAnglesDeg { get => prevAnglesDeg; private set { prevAnglesDeg = value; } }
+    private float[] prevAnglesDeg;
+    public float[] PreviousJointAnglesDeg { get => prevAnglesDeg; }
 
     void Awake()
     {
@@ -58,8 +58,16 @@ public class RobotManager : MonoBehaviour
                 continue;
             }
 
-            joints[jointAngleIdx].transform.localRotation = joints[jointAngleIdx].transform.localRotation * Quaternion.AngleAxis(angles[jointAngleIdx] - prevAnglesDeg[jointAngleIdx], robotJoints[jointAngleIdx].axis);
+            // Salva l'orientazione prima dell'applicazione dell'angolo
+            Quaternion initialRotation = joints[jointAngleIdx].transform.localRotation;
+
+            // Applica l'angolo del giunto
+            joints[jointAngleIdx].transform.localRotation *= Quaternion.AngleAxis(angles[jointAngleIdx] - prevAnglesDeg[jointAngleIdx], robotJoints[jointAngleIdx].axis);
             prevAnglesDeg[jointAngleIdx] = angles[jointAngleIdx];
+
+            
+            
         }
     }
 }
+

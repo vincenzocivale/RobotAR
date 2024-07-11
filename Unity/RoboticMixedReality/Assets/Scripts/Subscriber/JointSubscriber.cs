@@ -1,5 +1,4 @@
 using UnityEngine;
-
 using Unity.Robotics.ROSTCPConnector;
 using RosMessageTypes.Sensor;
 
@@ -13,7 +12,6 @@ public class JointSubscriber : MonoBehaviour
     [SerializeField]
     private string jointTopic;
 
-
     void Awake()
     {
         jointStatesDeg = new float[numberOfJoints];
@@ -23,15 +21,27 @@ public class JointSubscriber : MonoBehaviour
     void Start()
     {
         ROSConnection.GetOrCreateInstance().Subscribe<JointStateMsg>(jointTopic, Updatejoints);
-
     }
 
     void Updatejoints(JointStateMsg jointState)
     {
-        for (int i = 0; i < numberOfJoints; i++)
+        if (jointState.position.Length < numberOfJoints)
         {
-            jointStatesDeg[i] = (float)(jointState.position[i] * Mathf.Rad2Deg);
+            Debug.LogError($"Received joint state message with fewer positions than expected. Expected: {numberOfJoints}, Received: {jointState.position.Length}");
+            return;
         }
 
+        try
+        {
+            for (int i = 0; i < numberOfJoints; i++)
+            {
+                jointStatesDeg[i] = (float)(jointState.position[i] * Mathf.Rad2Deg);
+            }
+        }
+        catch (System.IndexOutOfRangeException e)
+        {
+            Debug.LogError($"IndexOutOfRangeException: {e.Message}\nJointState message length: {jointState.position.Length}, numberOfJoints: {numberOfJoints}");
+        }
     }
 }
+

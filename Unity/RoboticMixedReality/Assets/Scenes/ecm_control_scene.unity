@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44658822, g: 0.49642307, b: 0.5748253, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3497,7 +3497,7 @@ ArticulationBody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_Immovable: 0
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_CollisionDetectionMode: 0
 --- !u!114 &792037899
 MonoBehaviour:
@@ -3524,7 +3524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad676783b2d515847aff765ecd5a02ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axis: {x: 0, y: 0, z: 0}
+  axis: {x: 0, y: 0, z: 1}
 --- !u!1 &845562949
 GameObject:
   m_ObjectHideFlags: 8
@@ -3977,8 +3977,8 @@ ArticulationBody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_Immovable: 0
-  m_UseGravity: 1
+  m_Immovable: 1
+  m_UseGravity: 0
   m_CollisionDetectionMode: 0
 --- !u!114 &1076053726
 MonoBehaviour:
@@ -4005,7 +4005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad676783b2d515847aff765ecd5a02ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axis: {x: 0, y: 0, z: 0}
+  axis: {x: 0, y: 0, z: -1}
 --- !u!1 &1078880780
 GameObject:
   m_ObjectHideFlags: 0
@@ -4143,7 +4143,7 @@ ArticulationBody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_Immovable: 0
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_CollisionDetectionMode: 0
 --- !u!114 &1078880785
 MonoBehaviour:
@@ -4170,7 +4170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad676783b2d515847aff765ecd5a02ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axis: {x: 0, y: 0, z: 0}
+  axis: {x: 0, y: 0, z: 1}
 --- !u!1001 &1113097797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4378,7 +4378,7 @@ ArticulationBody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_Immovable: 0
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_CollisionDetectionMode: 0
 --- !u!114 &1160462878
 MonoBehaviour:
@@ -4405,7 +4405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad676783b2d515847aff765ecd5a02ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axis: {x: 0, y: 0, z: 0}
+  axis: {x: 1, y: 1, z: 0}
 --- !u!1 &1161666721
 GameObject:
   m_ObjectHideFlags: 0
@@ -4416,7 +4416,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1161666722}
   - component: {fileID: 1161666723}
-  - component: {fileID: 1161666724}
   m_Layer: 0
   m_Name: Subscribers
   m_TagString: Untagged
@@ -4452,20 +4451,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jointStatesDeg: []
-  numberOfJoints: 7
+  numberOfJoints: 6
   jointTopic: /joint_states
---- !u!114 &1161666724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1161666721}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3759d0c07ddda2b4685118854fbe6f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1184519564
 GameObject:
   m_ObjectHideFlags: 8
@@ -6671,10 +6658,10 @@ MonoBehaviour:
   selectedJoint: 
   selectedIndex: 0
   control: 0
-  stiffness: 0
-  damping: 0
-  forceLimit: 0
-  speed: 5
+  stiffness: 10000
+  damping: 100
+  forceLimit: 1000
+  speed: 10
   torque: 100
   acceleration: 5
   highLightColor: {r: 1, g: 0, b: 0, a: 1}
@@ -6724,7 +6711,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   linkTags:
-  - base_link
   - yaw_link
   - pitch_front_link
   - pitch_bottom_link
@@ -7088,7 +7074,7 @@ ArticulationBody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_Immovable: 0
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_CollisionDetectionMode: 0
 --- !u!114 &1699675882
 MonoBehaviour:
@@ -7115,7 +7101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad676783b2d515847aff765ecd5a02ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axis: {x: 0, y: 0, z: 0}
+  axis: {x: 0, y: 0, z: 1}
 --- !u!1 &1713173170
 GameObject:
   m_ObjectHideFlags: 0
@@ -7169,8 +7155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xAxis: 0
   jointName: base_link__yaw_link
-  EffortLimit: 1000
-  VelocityLimit: 1000
+  EffortLimit: 1000000
+  VelocityLimit: 100000000000
 --- !u!114 &1713173173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7253,7 +7239,7 @@ ArticulationBody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_Immovable: 0
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_CollisionDetectionMode: 0
 --- !u!114 &1713173175
 MonoBehaviour:
@@ -7280,7 +7266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad676783b2d515847aff765ecd5a02ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axis: {x: 0, y: 0, z: 0}
+  axis: {x: 0, y: 0, z: -1}
 --- !u!1001 &1722958233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8213,7 +8199,7 @@ ArticulationBody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_Immovable: 0
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_CollisionDetectionMode: 0
 --- !u!114 &2133735326
 MonoBehaviour:
@@ -8240,7 +8226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad676783b2d515847aff765ecd5a02ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  axis: {x: 0, y: 0, z: 0}
+  axis: {x: 0, y: 0, z: 1}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

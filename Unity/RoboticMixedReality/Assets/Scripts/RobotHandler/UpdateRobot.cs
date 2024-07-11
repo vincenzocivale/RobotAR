@@ -9,7 +9,6 @@ public class UpdateRobot : MonoBehaviour
     RobotManager robotManager;
     JointSubscriber jointSubscriber;
 
-
     void Awake()
     {
         robotManager = GetComponent<RobotManager>();
@@ -22,3 +21,4 @@ public class UpdateRobot : MonoBehaviour
         robotManager.SetJointAngles(jointSubscriber.jointStatesDeg);
     }
 }
+

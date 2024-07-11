@@ -28,11 +28,13 @@ namespace Unity.Robotics.UrdfImporter.Control{
             jointChain = new List<ArticulationBody>();
 
             robot = FindRobotObject();
-            
-            if (!robot)
+            // Gestisci il caso in cui il GameObject con il tag 'robot' non sia stato trovato
+            if (robot == null)
             {
-                return;
+            Debug.LogError("GameObject with tag 'robot' not found. Make sure it exists in the scene and is correctly tagged.");
+            return;
             }
+            
 
             foreach (ArticulationBody joint in robot.GetComponentsInChildren<ArticulationBody>())
             {
