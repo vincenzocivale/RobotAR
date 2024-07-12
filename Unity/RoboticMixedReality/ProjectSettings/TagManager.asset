@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - tool_link
+  - base_link
+  - pitch_front_link
+  - pitch_bottom_link
+  - robot
+  - pitch_end_link
+  - yaw_link
+  - main_insertion_link
   layers:
   - Default
   - TransparentFX
@@ -36,7 +44,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Spatial Awareness
   m_SortingLayers:
   - name: Default
     uniqueID: 0
