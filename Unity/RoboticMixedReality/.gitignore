@@ -1,0 +1,21 @@
+# Unity specific
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Uu]ser[Ss]ettings/
+
+# Visual Studio / MonoDevelop specific
+*.userprefs
+*.suo
+*.sln*
+*.csproj
+*.pidb
+*.unityproj
+*.booproj
+*.orig
+
+# Unity3D generated files
+*.pidb.meta
