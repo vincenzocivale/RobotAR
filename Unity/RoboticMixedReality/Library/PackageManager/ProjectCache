@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638563687270984989
-    m_Hash: 1783855078
+      ticks: 638564709405658802
+    m_Hash: 1574759335
   m_LockFileStatus:
     m_FilePath: C:/Users/cical/Documents/GitHub/Repositories/RoboticAR/Unity/RoboticMixedReality/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638563687271096515
-    m_Hash: 1651651383
+      ticks: 638564709405670471
+    m_Hash: 2143251654
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -31,7 +31,7 @@ m_LocalPackages:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638563677203635345
+      ticks: 638564709404817687
     m_Hash: 3436732664
   - m_FilePath: C:\Users\cical\Documents\GitHub\Repositories\RoboticAR\Unity\RoboticMixedReality\Packages\MixedReality\com.microsoft.mixedreality.toolkit.foundation-2.8.3.tgz/package.json
     m_PathExists: 0
@@ -45,7 +45,7 @@ m_LocalPackages:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638165653091085846
+      ticks: 638564709405433119
     m_Hash: 4293736214
   - m_FilePath: C:\Users\cical\Documents\GitHub\Repositories\RoboticAR\Unity\RoboticMixedReality\Packages\MixedReality\com.microsoft.mixedreality.toolkit.standardassets-2.8.3.tgz/package.json
     m_PathExists: 0
@@ -59,7 +59,7 @@ m_LocalPackages:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638165653049883528
+      ticks: 638564709405648790
     m_Hash: 4011041438
 m_ProjectPath: C:/Users/cical/Documents/GitHub/Repositories/RoboticAR/Unity/RoboticMixedReality/Packages
 m_EditorVersion: 2022.3.8f1 (b5eafc012955)
