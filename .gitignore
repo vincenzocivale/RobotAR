@@ -1,19 +1,1 @@
-# Ignora tutte le cartelle dei progetti Unity in RoboticAR/Unity/
-/Unity/*/Library/
-/Unity/*/Temp/
-/Unity/*/Obj/
-/Unity/*/Build/
-/Unity/*/Builds/
-/Unity/*/Logs/
-/Unity/*/UserSettings/
 
-# Ignora i file generati dai progetti Unity
-/Unity/*/*.userprefs
-/Unity/*/*.suo
-/Unity/*/*.sln*
-/Unity/*/*.csproj
-/Unity/*/*.pidb
-/Unity/*/*.unityproj
-/Unity/*/*.booproj
-/Unity/*/*.orig
-/Unity/*/*.meta
