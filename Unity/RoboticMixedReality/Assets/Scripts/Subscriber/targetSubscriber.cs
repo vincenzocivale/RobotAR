@@ -1,62 +1,59 @@
 using UnityEngine;
 using Unity.Robotics.ROSTCPConnector;
 using RosMessageTypes.Geometry;
+using System.Collections;
+using System.Diagnostics;
 
-public class targetSubscriber : MonoBehaviour
+public class TargetSubscriber : MonoBehaviour
 {
-    [Tooltip("Name of the topic where the target configuration is published")]
-    public string topicName = "/end_effector_pose";
-
-    [Tooltip("Unity scene element representing the desired target")]
-    public Transform targetTransform;
     private ROSConnection ros;
-    private bool isInitialPoseReceived = false;
-    private Vector3 previousPosition;
-    private Vector3 previousEulerAngles;
+
+    [SerializeField]
+    private string targetTopicName = "/target_position";
+
+    [SerializeField]
+    private GameObject targetGameObject;
+
+    private bool messageReceived = false;
+    private float timeout = 5.0f; // Timeout in seconds to wait for a message
 
     void Start()
     {
+        // Get or create the ROSConnection instance
         ros = ROSConnection.GetOrCreateInstance();
-        ros.Subscribe<PoseStampedMsg>(topicName, ReceiveMessage);
+
+        // Subscribe to the target topic with a callback function
+        ros.Subscribe<PoseMsg>(targetTopicName, UpdateTargetPosition);
+
+        // Start the timeout coroutine
+        StartCoroutine(TopicTimeoutChecker());
     }
 
-    void ReceiveMessage(PoseStampedMsg message)
+    // Callback function to update the target position and orientation
+    void UpdateTargetPosition(PoseMsg pose)
     {
-        // Extract position and orientation from received messages
-        Vector3 receivedPosition = new Vector3(
-            (float)message.pose.position.x,
-            (float)message.pose.position.y,
-            (float)message.pose.position.z);
+        // Extract position and orientation from the PoseMsg
+        Vector3 position = new Vector3((float)pose.position.x, (float)pose.position.y, (float)pose.position.z);
+        Quaternion orientation = new Quaternion((float)pose.orientation.x, (float)pose.orientation.y, (float)pose.orientation.z, (float)pose.orientation.w);
 
-        // Assume the orientation is given as roll, pitch, yaw in radians
-        float roll = (float)message.pose.orientation.x;
-        float pitch = (float)message.pose.orientation.y;
-        float yaw = (float)message.pose.orientation.z;
+        // Update the target GameObject's transform
+        targetGameObject.transform.position = position;
+        targetGameObject.transform.rotation = orientation;
 
-        Vector3 receivedEulerAngles = new Vector3(pitch * Mathf.Rad2Deg, yaw * Mathf.Rad2Deg, roll * Mathf.Rad2Deg);
+        // Set messageReceived to true as we have received a message
+        messageReceived = true;
+    }
 
-        if (!isInitialPoseReceived)
+    // Coroutine to check for timeout
+    private IEnumerator TopicTimeoutChecker()
+    {
+        yield return new WaitForSeconds(timeout);
+
+        if (!messageReceived)
         {
-            previousPosition = receivedPosition;
-            previousEulerAngles = receivedEulerAngles;
-            isInitialPoseReceived = true;
+            // Use UnityEngine.Debug
+            UnityEngine.Debug.Log($"No messages received on topic '{targetTopicName}' within {timeout} seconds. Please check if the topic exists and is being published.");
         }
-        else
-        {
-            // Calculate differences from initial position
-            Vector3 positionDifference = receivedPosition - previousPosition;
-            Vector3 rotationDifference = receivedEulerAngles - previousEulerAngles;
-
-            // Convert rotation difference to a quaternion
-            Quaternion rotationDifferenceQuat = Quaternion.Euler(rotationDifference);
-
-            // Update GameObject position and orientation by applying proportional movements/rotations from the ROS target
-            targetTransform.position += positionDifference;
-            targetTransform.rotation *= rotationDifferenceQuat;
-        }
-
-        // Update previous positions with received values
-        previousPosition = receivedPosition;
-        previousEulerAngles = receivedEulerAngles;
     }
 }
+

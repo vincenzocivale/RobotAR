@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638564747150223075
-    m_Hash: 1574759335
+      ticks: 638568188058646463
+    m_Hash: 1652431144
   m_LockFileStatus:
     m_FilePath: C:/Users/cical/Documents/GitHub/Repositories/RoboticAR/Unity/RoboticMixedReality/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638564747150243062
-    m_Hash: 2143251654
+      ticks: 638568188175571100
+    m_Hash: 3287174475
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -61,6 +61,34 @@ m_LocalPackages:
       serializedVersion: 2
       ticks: 638564747150201768
     m_Hash: 4011041438
+  - m_FilePath: C:\Users\cical\Documents\GitHub\Repositories\RoboticAR\Unity\RoboticMixedReality\Packages\MixedReality\com.microsoft.mixedreality.toolkit.examples-2.8.3.tgz/package.json
+    m_PathExists: 0
+    m_ContentTrackingEnabled: 1
+    m_ModificationDate:
+      serializedVersion: 2
+      ticks: 0
+    m_Hash: 0
+  - m_FilePath: C:\Users\cical\Documents\GitHub\Repositories\RoboticAR\Unity\RoboticMixedReality\Packages\MixedReality\com.microsoft.mixedreality.toolkit.examples-2.8.3.tgz
+    m_PathExists: 1
+    m_ContentTrackingEnabled: 1
+    m_ModificationDate:
+      serializedVersion: 2
+      ticks: 638221710206795227
+    m_Hash: 3014889061
+  - m_FilePath: C:\Users\cical\Documents\GitHub\Repositories\RoboticAR\Unity\RoboticMixedReality\Packages\MixedReality\com.microsoft.mixedreality.toolkit.extensions-2.8.3.tgz/package.json
+    m_PathExists: 0
+    m_ContentTrackingEnabled: 1
+    m_ModificationDate:
+      serializedVersion: 2
+      ticks: 0
+    m_Hash: 0
+  - m_FilePath: C:\Users\cical\Documents\GitHub\Repositories\RoboticAR\Unity\RoboticMixedReality\Packages\MixedReality\com.microsoft.mixedreality.toolkit.extensions-2.8.3.tgz
+    m_PathExists: 1
+    m_ContentTrackingEnabled: 1
+    m_ModificationDate:
+      serializedVersion: 2
+      ticks: 638221579111700973
+    m_Hash: 3420622655
 m_ProjectPath: C:/Users/cical/Documents/GitHub/Repositories/RoboticAR/Unity/RoboticMixedReality/Packages
 m_EditorVersion: 2022.3.8f1 (b5eafc012955)
 m_ResolvedPackages:
@@ -3488,6 +3516,160 @@ m_ResolvedPackages:
     deprecationMessage: 
   isDeprecated: 0
   deprecationMessage: 
+- packageId: com.microsoft.mixedreality.toolkit.examples@file:C:\Users\cical\Documents\GitHub\Repositories\RoboticAR\Unity\RoboticMixedReality\Packages\MixedReality\com.microsoft.mixedreality.toolkit.examples-2.8.3.tgz
+  testable: 0
+  isDirectDependency: 1
+  version: 2.8.3
+  source: 6
+  resolvedPath: C:\Users\cical\Documents\GitHub\Repositories\RoboticAR\Unity\RoboticMixedReality\Library\PackageCache\com.microsoft.mixedreality.toolkit.examples@42f661a9fb5b
+  assetPath: Packages/com.microsoft.mixedreality.toolkit.examples
+  name: com.microsoft.mixedreality.toolkit.examples
+  displayName: Mixed Reality Toolkit Examples
+  author:
+    name: Microsoft
+    email: 
+    url: 
+  category: 
+  type: 
+  description: Example scenes and assets for the Microsoft Mixed Reality Toolkit.
+  status: 0
+  errors: []
+  versions:
+    all: []
+    compatible: []
+    recommended: 
+    deprecated: []
+  dependencies:
+  - name: com.microsoft.mixedreality.toolkit.foundation
+    version: 2.8.3
+  - name: com.microsoft.mixedreality.toolkit.extensions
+    version: 2.8.3
+  resolvedDependencies:
+  - name: com.microsoft.mixedreality.toolkit.foundation
+    version: 2.8.3
+  - name: com.microsoft.mixedreality.toolkit.standardassets
+    version: 2.8.3
+  - name: com.unity.textmeshpro
+    version: 3.0.6
+  - name: com.unity.ugui
+    version: 1.0.0
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  - name: com.microsoft.mixedreality.toolkit.extensions
+    version: 2.8.3
+  keywords:
+  - mrtk
+  - microsoft
+  - mixed
+  - reality
+  - augmented
+  - virtual
+  - xr
+  - hololens
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/microsoft/MixedRealityToolkit-Unity.git
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+- packageId: com.microsoft.mixedreality.toolkit.extensions@file:C:\Users\cical\Documents\GitHub\Repositories\RoboticAR\Unity\RoboticMixedReality\Packages\MixedReality\com.microsoft.mixedreality.toolkit.extensions-2.8.3.tgz
+  testable: 0
+  isDirectDependency: 1
+  version: 2.8.3
+  source: 6
+  resolvedPath: C:\Users\cical\Documents\GitHub\Repositories\RoboticAR\Unity\RoboticMixedReality\Library\PackageCache\com.microsoft.mixedreality.toolkit.extensions@84fe3e76e9b7
+  assetPath: Packages/com.microsoft.mixedreality.toolkit.extensions
+  name: com.microsoft.mixedreality.toolkit.extensions
+  displayName: Mixed Reality Toolkit Extensions
+  author:
+    name: Microsoft
+    email: 
+    url: 
+  category: 
+  type: 
+  description: 'Extensions to the Microsoft Mixed Reality Toolkit. This package includes:
+    Hand Physics Service, Lost Tracking Service and Scene Transition Service.'
+  status: 0
+  errors: []
+  versions:
+    all: []
+    compatible: []
+    recommended: 
+    deprecated: []
+  dependencies:
+  - name: com.microsoft.mixedreality.toolkit.foundation
+    version: 2.8.3
+  resolvedDependencies:
+  - name: com.microsoft.mixedreality.toolkit.foundation
+    version: 2.8.3
+  - name: com.microsoft.mixedreality.toolkit.standardassets
+    version: 2.8.3
+  - name: com.unity.textmeshpro
+    version: 3.0.6
+  - name: com.unity.ugui
+    version: 1.0.0
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  keywords:
+  - mrtk
+  - microsoft
+  - mixed
+  - reality
+  - augmented
+  - virtual
+  - hololens
+  - xr
+  - extensions
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.com/microsoft/MixedRealityToolkit-Unity.git
+    revision: 
+    path: 
+  unityLifecycle:
+    version: 
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
 - packageId: com.unity.modules.subsystems@1.0.0
   testable: 0
   isDirectDependency: 0
@@ -3855,6 +4037,7 @@ m_ResolvedPackages:
     - 1.8.0
     - 1.8.1
     - 1.8.2
+    - 1.9.0
     compatible:
     - 1.6.3
     - 1.7.0
@@ -3863,6 +4046,7 @@ m_ResolvedPackages:
     - 1.8.0
     - 1.8.1
     - 1.8.2
+    - 1.9.0
     recommended: 1.6.3
     deprecated: []
   dependencies:

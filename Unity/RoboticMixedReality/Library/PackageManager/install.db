@@ -24,6 +24,22 @@
         "size": 5328617,
         "localPath": "C:\\Users\\cical\\Documents\\GitHub\\Repositories\\RoboticAR\\Unity\\RoboticMixedReality\\Packages\\MixedReality\\com.microsoft.mixedreality.toolkit.standardassets-2.8.3.tgz"
       }
+    },
+    "com.microsoft.mixedreality.toolkit.examples": {
+      "tarball": {
+        "hash": "42f661a9fb5b",
+        "mtime": 1686574220680,
+        "size": 55195848,
+        "localPath": "C:\\Users\\cical\\Documents\\GitHub\\Repositories\\RoboticAR\\Unity\\RoboticMixedReality\\Packages\\MixedReality\\com.microsoft.mixedreality.toolkit.examples-2.8.3.tgz"
+      }
+    },
+    "com.microsoft.mixedreality.toolkit.extensions": {
+      "tarball": {
+        "hash": "84fe3e76e9b7",
+        "mtime": 1686561111170,
+        "size": 1131406,
+        "localPath": "C:\\Users\\cical\\Documents\\GitHub\\Repositories\\RoboticAR\\Unity\\RoboticMixedReality\\Packages\\MixedReality\\com.microsoft.mixedreality.toolkit.extensions-2.8.3.tgz"
+      }
     }
   }
 }
