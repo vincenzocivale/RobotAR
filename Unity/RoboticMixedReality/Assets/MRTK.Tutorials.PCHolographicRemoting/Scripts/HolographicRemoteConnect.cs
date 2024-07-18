@@ -25,11 +25,11 @@ public class HolographicRemoteConnect : MonoBehaviour
 
     private void OnGUI()
     {
-        IP = GUI.TextField(new Rect(10, 10, 200, 30), IP, 25);
+        IP = GUI.TextField(new Rect(10, 30, 200, 30), IP, 25);
 
         string buttonText = connected ? "Disconnect" : "Connect";
 
-        if (GUI.Button(new Rect(220, 10, 100, 30), buttonText))
+        if (GUI.Button(new Rect(220, 30, 100, 30), buttonText))
         {
             if (connected)
             {
