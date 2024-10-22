@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/ecm_control_scene.unity
+- path: Assets/Scenes/robot_hand.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
